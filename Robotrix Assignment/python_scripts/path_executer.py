@@ -10,7 +10,7 @@ from PIL import Image
 home = 0
 goal = 2
 
-go_to_destination = 1
+go_to_destination = 0
 
 ideal_path = []
 
