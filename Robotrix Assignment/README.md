@@ -1,3 +1,5 @@
+
+https://github.com/Aerokrishna/Ka-Boom-Robotrix-2024/assets/122991458/4ed019af-fb84-4d47-986a-d6751f63b813
 # Ka-Boom-Robotrix-2024
 ROBOTRIX ASSIGNMENT SOLUTION
 
@@ -29,6 +31,12 @@ There is a infinite loop that runs in the try condition where the get_ideal_path
 
 {WHILE TESTING THE CODE}
 Keep in mind that the execution part occurs in 2 ways. To make the robot go to the farthest pick-up point set the go_to_destination = 0 else if you want to return set go_to_destination = 1 and run the code making sure the orientation of the bot at start of the farthest node is 0 degree.
+
+
+
+https://github.com/Aerokrishna/Ka-Boom-Robotrix-2024/assets/122991458/11935ef3-fbf4-49b5-b89d-e3dd55ea594c
+https://github.com/Aerokrishna/Ka-Boom-Robotrix-2024/assets/122991458/cbd568c0-67be-4302-b263-c9628bc23f26
+
 
 
 
