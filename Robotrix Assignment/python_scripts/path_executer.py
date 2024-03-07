@@ -7,8 +7,10 @@ import multiprocessing
 from PIL import Image
 
 # describe the home and target nodes
-home = 2
-goal = 0
+home = 0
+goal = 2
+
+go_to_destination = 1
 
 ideal_path = []
 
@@ -25,16 +27,18 @@ waypoint = 0
 
 #function that returns the ideal path with the coordinates of the nodes to be sequentially traversed
 def get_ideal_path():
-		global waypoint,home,goal,checkpoint
+		global waypoint,home,goal,go_to_destination
 
 		#call the path planner class
 		path = kp(home,goal)
-	
-		# 	home = 2
-		# 	goal = 0
-		# 	path.curr = home
-		# 	path.open_nodes = [0,2,3,4]
-		# 	path.closed_nodes = [1]
+		if go_to_destination == 0:
+			pass
+		if go_to_destination == 1:
+			home = 2
+			goal = 0
+			path.curr = home
+			path.open_nodes = [0,2,3,4]
+			path.closed_nodes = [1]
 
 		#get the shortest path 
 		path.get_fcost((path.vertices[home]),path.vertices[goal])
@@ -57,9 +61,6 @@ def path_executor(sim,goal):
 	relativeToObjectHandle = sim.handle_world
 	position = sim.getObjectPosition(probot, relativeToObjectHandle)
 	orientation = sim.getObjectOrientation(probot, relativeToObjectHandle)
-
-	l_motor_speed = 0
-	r_motor_speed = 0
 
 	#getting yaw of the bot
 	bot_or = orientation[2]
@@ -134,21 +135,12 @@ if __name__ == "__main__":
 		try:
 			while True:
 				# the function get ideal path is called in this loop and goal coordinates are obtained
+
 				if waypoint==0:
 					path_executor(sim,get_ideal_path()[0])
 				if waypoint==1:
 					path_executor(sim,get_ideal_path()[1])
-					
-				# if waypoint==2:
-				# 	path_executor(sim,get_ideal_path()[0])
-				# if waypoint==3:
-				# 	path_executor(sim,get_ideal_path()[1])
-				# if waypoint==3:
-				# 	path_executor(sim,get_ideal_path()[2])
 
-				# time.sleep(5)
-				# if KeyboardInterrupt:
-				# 	break
 
 		except Exception:
 			print('\n[ERROR] Your control_logic function throwed an Exception, kindly debug your code!')
