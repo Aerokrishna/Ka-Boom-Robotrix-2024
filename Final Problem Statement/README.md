@@ -2,11 +2,11 @@
 ROBOTRIX FINAL PROBLEM STATEMENT
 
 
-ht
+
 
 https://github.com/Aerokrishna/Ka-Boom-Robotrix-2024/assets/122991458/96f39534-97f6-404c-934f-8f09fdf716c9
 
-tps://github.com/Aerokrishna/Ka-Boom-Robotrix-2024/assets/122991458/84ff4537-9078-458c-a3fb-b8d8ba91bbd6
+https://github.com/Aerokrishna/Ka-Boom-Robotrix-2024/assets/122991458/84ff4537-9078-458c-a3fb-b8d8ba91bbd6
 
 
 This branch contains two python scripts medbot_nav.py and medbot_sim.py. The medbot_nav python file contains a PID code for the robot to navigate autonomously. The medbot_sim contains the algorithm for the medbot to move the medbot while computing the inverse kinematics of the stewart platform to balance the sample(ball) while motion.
